@@ -1,0 +1,247 @@
+
+/*
+========
+MAIN CSS
+========
+*/
+
+.main {
+  background: var(--secondary);
+  position: absolute;
+  /* height: 100%; */
+  /* width: calc(100% - 240px); */
+  /* left: 250px; */
+
+  width: calc(100% - 280px);
+	margin: 10px 15px;
+	border-radius: 8px;
+}
+
+.main .text {
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--text);
+  margin: 12px;
+}
+
+
+/*
+===========
+SIDEBAR CSS
+===========
+*/
+
+.sidebar {  
+	background: var(--static3);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0.75rem;
+	border-radius: 8px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	margin: 10px;
+	width: 250px;
+	transition: all 0.5s ease;
+	gap: 20px;
+}
+
+.sidebar.close {
+  width: 70px;
+}
+
+.sidebar-elements {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/*
+.sidebar-elements::-webkit-scrollbar {
+	display: none;
+}
+
+.sidebar-elements.elements-1 {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	height: 50%;
+	border-bottom: 2px solid black;
+}
+*/
+
+.sidebar-elements.elements-2 {
+	margin-top: auto;
+}
+
+.sidebar-logo .icon-wrapper i,
+.sidebar-logo .icon-wrapper svg {
+	color: var(--primary);
+}
+
+.sidebar-elements .logout .icon-wrapper {
+	background: var(--error);
+}
+
+.sidebar-element.active {
+	background: var(--static4);
+	border-radius: 6px;
+}
+
+.sidebar-element:active {
+	background: var(--static4);
+	border-radius: 6px;
+}
+
+.sidebar-element.profile .sidebar-element-link .icon-wrapper {
+	background: transparent;
+	border: 1px solid var(--text);
+	border-radius: 99999px;
+	display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-element-link .profile-img {
+	width: 3rem;
+  height: 3rem;
+  border-radius: 99999px;
+}
+
+.sidebar .separator {
+	width: 100%;
+	color: var(--text);
+	background: var(--text);
+	height: 2px;
+}
+
+.sidebar-element-link {
+	color: #fff;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	border-radius: 6px;
+	position: relative;
+	padding: 5px;
+}
+
+.sidebar-element-link:hover,
+.sidebar-element-link:focus,
+.sidebar-element-link.active {
+	background: var(--static4);
+	outline: 0;
+}
+
+.sidebar.close
+.sidebar-element-link:hover .tool-tip,
+.sidebar-element-link:focus .tool-tip,
+.sidebar-element-link.active .tool-tip {
+	transform: scale(1);
+	opacity: 1;
+}
+
+.sidebar-element-link .icon-wrapper {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--static9);
+  border-radius: 4px;
+  margin-right: 10px;
+	position: relative;
+}
+
+.sidebar.close .sidebar-element-link .text-wrapper {
+  display: none;
+}
+
+.sidebar-element-link .text-wrapper {
+  color: var(--text);
+  font-size: var(--h5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.sidebar.close .sidebar-element-link .icon-wrapper {
+  margin: 0;
+  height: 3.2rem;
+}
+
+.sidebar-element-link i,
+.sidebar-element-link svg {
+	font-size: 1.8rem;
+  width: 1.8rem;
+  height: 1.8rem;
+	color: var(--text);
+}
+
+.sidebar-element-link .notification {
+  display: none;
+}
+
+.sidebar-element-link.notification .notification-dot {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: var(--primary);
+  border-radius: 50%;
+	left: 64%;
+	top: 16%;
+}
+
+.sidebar-element-link.notification .notification-number {
+  position: absolute;
+  display: flex;
+	align-items: center;
+	justify-content: center;
+  width: 14px;
+  height: 14px;
+  background: var(--primary);
+	color: var(--black);
+  border-radius: 99999px;
+	left: 54%;
+	top: 18%;
+	font-size: var(--small);
+	font-weight: 700;
+}
+
+.sidebar-element-link .tool-tip {
+	position: absolute;
+	background: var(--text);
+	color: var(--bg);
+	white-space: nowrap;
+	padding: 0.5rem 1rem;
+	border-radius: 6px;
+	left: calc(100% + 1.5rem);
+	transform-origin: center left;
+	transform: scale(0);
+	opacity: 0;
+	transition: 0.15s ease;
+}
+
+.sidebar-element-link .tool-tip:before {
+	content: "";
+	display: block;
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	background: var(--text);
+	left: -5px;
+	top: 50%;
+	transform: translatey(-50%) rotate(45deg);
+	border-radius: 3px;
+}
+
+@media screen and (min-width: 1200px) {
+	.sidebar.close {
+		width: 85px;
+	}
+}
