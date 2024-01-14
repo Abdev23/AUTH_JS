@@ -1,22 +1,26 @@
 
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
-  <%- include('../root/root_header') %>
-  <body>
-    
-    <%- include('app_navbar') %>
+<%- include('../root/root_header') %>
 
-    <div class="landingpage">
-      <main>
-        <div class="hero">
-          <h1> LANDING PAGE </h1>
-          <h1> <%= number %> </h1>
+  <%- include('app_navbar') %>
+
+  <div class="landingpage">
+    <main>
+      <div class="hero">
+        <h1> LANDING PAGE </h1>
+        <h1> <%= number %> </h1>
+      </div>
+
+      <div class="section">
+        <div class="primary-button">
+          Button
         </div>
-      </main>
-    </div>
+        <div class="secondary-button">
+          Button
+        </div>
+      </div>
+    </main>
+  </div>
 
-    <%- include('app_footer') %>
+  <%- include('app_footer') %>
 
-    <%- include('../root/root_body') %>
-  </body>
-</html>
+<%- include('../root/root_body') %>

@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "type": "module",
   "description": "simple authentication project with nodejs express-js",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon server.js",
+    "dev": "node --watch server.js"
   },
   "repository": {
     "type": "git",
